@@ -79,7 +79,7 @@ dependencies {
 
     // Support
     implementation "androidx.appcompat:appcompat:$androidx_appcompat_version"
-    kapt "androidx.lifecycle:lifecycle-compiler:$androidx_lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$androidx_lifecycle_version"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

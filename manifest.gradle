@@ -16,7 +16,7 @@ ext {
     demo_app_id = 'net.gotev.uploadservicedemo'
 
     // Gradle classpath dependencies versions
-    kotlin_version = '1.8.20'
+    kotlin_version = '1.8.21'
     gradle_version = '8.0.2'
     kotlin_lint_version = '9.0.0'
 
@@ -32,6 +32,6 @@ ext {
     mock_web_server_version = '4.9.0'
 
     // Library and app dependencies versions
-    androidx_lifecycle_version = '2.6.1'
+    androidx_lifecycle_version = '2.6.2'
     androidx_appcompat_version = '1.6.1'
 }
