@@ -3,6 +3,7 @@ package net.gotev.uploadservice.observer.request
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import net.gotev.uploadservice.UploadServiceConfig
 import net.gotev.uploadservice.data.BroadcastData
 import net.gotev.uploadservice.data.UploadInfo
@@ -33,7 +34,13 @@ open class BaseRequestObserver(
     }
 
     open fun register() {
-        context.registerReceiver(this, UploadServiceConfig.broadcastStatusIntentFilter)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            context.registerReceiver(this, UploadServiceConfig.broadcastStatusIntentFilter,
+                Context.RECEIVER_EXPORTED
+            )
+        } else {
+            context.registerReceiver(this, UploadServiceConfig.broadcastStatusIntentFilter)
+        }
     }
 
     open fun unregister() {
